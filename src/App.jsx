@@ -1,13 +1,17 @@
 import './App.css'
+import { Card } from './Components/db'
 import MainPage from './MainPage'
 import NavbarPage from "./NabarPage"
 
 function App() {
-
   return (
     <>
       <NavbarPage/>
-      <MainPage/>
+
+      {Card.map((car, index) => (
+        <MainPage car={car} />
+      ))}
+
     </>
   )
 }
